@@ -1,0 +1,446 @@
+/* ------------------------------------------------------------ */
+/* imports and utilities */
+
+/* 3rd-party CSS files */
+@import 'vendor/h5bp-head.css';
+@import 'vendor/normalize.css';
+@import 'vendor/h5bp-tail.css';
+
+/*<style>
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+</style>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+</style>*/
+
+/* use a more intuitive box sizing model (http://is.gd/wNVjAo) */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Scale down images and embedded videos so they don't overflow their parents */
+img, object { max-width: 100%; }
+
+/*	Development/layout aid. Remove the comments
+	on this rule in order to draw boxes around DIVs
+	and other elements used for layout. */
+/*
+div, main, article, section, aside, hgroup, header, footer, address, nav {
+	border: 1px solid rgba(255,0,0,0.15) !important;
+	background: rgba(255,0,0,0.05) !important;
+}
+*/
+
+
+/* ------------------------------------------------------------ */
+/* start project-specifc styles below this line */
+
+body {
+	/*font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: 2em;
+	color: white;
+
+}
+
+.container {
+	/*padding: 1em;*/
+
+	width: 90%; /*this info once belonged in the media query*/
+	max-width: 1200px; /*this info once belonged in the media query*/
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-gap: 1em;
+}
+
+.ssd-home{
+	background-image: url("../img/david_becker_edited.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center top;
+	padding: 2rem 0;
+}
+.guides{
+	background-image: url("../img/david_becker_edited.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center top;
+	padding: 2rem 0;
+}
+.about{
+	background-image: url("../img/david_becker_edited.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center top;
+	padding: 2rem 0;
+}
+.security-scenarios{
+	background-color: #28348a;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center top;
+	padding: 2rem 0;
+
+}
+.further-learning{
+	background-color: #28348a;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center top;
+	padding: 2rem 0;
+}
+
+.site-logo {
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+}
+
+.vl{
+	border-left: 2px solid white;
+
+	/*align-self: center top;*/
+	/*grid-column: 2 / 3;*/
+}
+
+.global-nav {
+	grid-column: 1 / 2;
+
+}
+.global-nav li{
+
+}
+.global-nav ul{
+	/*margin-top: 0.8em;*/
+	/*padding-left: 0px;*/
+	width: auto;
+	 overflow: hidden;
+	 position: inherit;  /* Set the navbar to fixed position...in center (use inherit) */
+	 /*top: 0; Position the navbar at the top of the page */
+	 /*padding: 0;*/
+	 padding: 0;
+	 text-align: center;
+}
+.global-nav a{
+		color: white;
+		/*padding: 1em 1em 1em 1em;*/
+		text-decoration: none;
+		font-size: 20px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: bold;
+		line-height: 35px;
+		/*border-style: solid;*/
+}
+
+.global-nav a:hover{
+		color: #e24a00;
+		opacity: 0.7;
+}
+.global-nav a.active {
+  color: #e24a00;
+}
+
+/*home page start*/
+.headline{
+	font-size: 50px;
+	font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+	line-height: 2.3em;
+	/*font-weight: 800px;*/
+	grid-column: 3 / 11;
+ /*this helps move text a little to left, but I wonder if there is an easier and more efficient way*/
+	/*margin-top: -130px;*/
+	color: white;
+}
+.intro {
+		color: white;
+		font-size: 21px;
+		grid-column: 3 / 11;
+		grid-row: 3 / 4;
+		/*margin-top: -30px;*/
+		/*grid-row: auto;*/
+}
+/*home page end*/
+
+
+/*about page start*/
+.about-headline{
+			line-height: 2em;
+			font-size: 16px;
+			grid-column: 3 / 6;
+			line-height: 2.5em;
+			grid-row: auto;
+}
+.about-subhead-1{
+	grid-column: 6 / 11;
+
+}
+.about-subhead-2{
+		grid-column: 6 / 11;
+
+}
+.about-subhead-3{
+		grid-column: 6 / 11;
+
+}
+/*about page end*/
+
+
+/*guide page start*/
+.Orange li{
+	color: #e24a00;
+}
+.basics-header{
+	grid-column: 3 / 4;
+	/*margin-left: -38px;*/
+}
+.basics{
+	grid-column: 4 / 7;
+	/*margin-left: -38px;*/
+	/*box-shadow: 0px 0px 0px 8px rgba(226,74,0,0.3);*/
+}
+.basics li{
+	margin: 20px 0;
+}
+.basics ul{
+
+}
+.basics a{
+	color: white;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 1.5em;
+}
+.guideb a:hover{
+		color: #e24a00;
+		opacity: 0.7;
+}
+.tools-header{
+	grid-column: 7 / 8;
+	/*margin-left: 50px;*/
+}
+.Tool-Guides{
+	grid-column: 8 / 11;
+	/*box-shadow: 0px 0px 0px 8px rgba(226,74,0,0.3);*/
+	/*margin-left: -38px;*/
+}
+.Tool-Guides li{
+	margin: 20px 0;
+}
+.Tool-Guides a{
+	color: white;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 1.5em;
+}
+.guides-tool_guides a:hover{
+		color: #e24a00;
+		opacity: 0.7;
+}
+.further-header{
+	grid-column: 3 / 4;
+
+}
+.Further-Learning{
+	grid-column: 4 / 7;
+	/*box-shadow: 0px 0px 0px 8px rgba(226,74,0,0.3);*/
+	/*margin-left: -38px;*/
+
+}
+.Further-Learning li{
+	margin: 20px 0;
+}
+.Further-Learning a{
+	color: white;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 1.5em;
+
+}
+.guides-further_learning a:hover{
+		color: #e24a00;
+		opacity: 0.7;
+}
+.ss-header{
+	grid-column: 7 / 8;
+	/*margin-left: 15px;*/
+}
+.Security-Scenarios{
+	grid-column: 8 / 11;
+	/*box-shadow: 0px 0px 0px 8px rgba(226,74,0,0.3);*/
+	/*margin-left: -38px;*/
+}
+.Security-Scenarios li{
+	margin: 20px 0;
+}
+.Security-Scenarios a{
+	color: white;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 1.5em;
+}
+.Security-Scenarios a:hover{
+		color: #e24a00;
+		opacity: 0.7;
+}
+/*guide page end*/
+
+
+/*security scenarios page start*/
+.security-scenario{
+	grid-column: 3 / 6;
+	line-height: 2.5em;
+}
+.ss-subhead{
+	grid-column: 6 / 11;
+}
+.ss-further-info{
+	grid-column: 6 / 11;
+}
+.ss-list a{
+	color: white;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+}
+.ss-list a:hover{
+		color: #e24a00;
+		opacity: 0.7;
+}
+
+/*security scenarios page end*/
+
+
+/*further learning page start*/
+.further-learning_header{
+	grid-column: 3 / 6;
+	line-height: 2.5em;
+}
+.further-learning_intro{
+	grid-column: 6 / 11;
+}
+.further-learning_subhead{
+	grid-column: 6 / 11;
+}
+.pull-quote{
+	grid-column: 6 / 11;
+	margin-top: ;
+	border-style: solid;
+	border-color: white;
+}
+.pull-quote p{
+	padding: 1em;
+	margin-left: 43px;
+}
+.further-learning_list{
+	grid-column: 6 / 11;
+}
+.further-learning_list li{
+	grid-column: 6 / 11;
+	padding-top: 1em;
+}
+/*further learning page end*/
+
+
+/* ------------------------------------------------------------ */
+/* media query containing styles for larger screens */
+@media (min-width: 720px) {
+
+	/* container on larger screens */
+	.container {
+
+		/*margin: 2em;*/
+		margin-right: auto;
+		margin-left: auto;
+		/*padding: 2em;*/
+		/*border: 1px solid #ddd;*/
+	}
+
+} /* end media query */
+
+@media (max-width: 800px) {
+
+	.container {
+		display: block;
+		padding: 2em;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+.headline{
+	font-size: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+	.site-logo{
+	width: 100px;
+	height: 100px;
+	float:;
+	margin-bottom: -20px;
+	margin-left: auto;
+	margin-right: auto;
+		/*top: 0;
+		float: left;*/
+	}
+		.global-nav a{
+			color: #fff;
+			text-decoration: none;
+			font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+			font-size: 16px;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: bold;
+			margin-left: auto;
+			margin-right: auto;
+		}
+.global-nav{
+	margin-left: auto;
+	margin-right: auto;
+}
+		.global-nav li{
+			padding: 0.5em 0.5em 0.5em 0.5em;
+		  /*float: right;*/
+			top: 0;
+			 float: left;
+			 margin-left: auto;
+		 	margin-right: auto;
+		}
+
+		.global-nav ul{
+			background: rgba(0,0,0,0.5);
+			/*margin-top: 0.8em;*/
+			/*padding-left: 0px;
+			margin-left: 20em;*/
+			 <!-- this closes the gap and makes things appear closer to each other -->
+
+			  /* Set the navbar to fixed position */
+			 top: 0; /* Position the navbar at the top of the page */
+			  /* Full width */
+				margin-left: auto;
+				margin-right: auto;
+		}
+
+		.vl{
+			border: none;
+		}
+
+	}
+
+}
